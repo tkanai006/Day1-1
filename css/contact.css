@@ -1,0 +1,177 @@
+html{
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body{
+  height: 100%;
+}
+
+.container{
+  width: 980px; /*bodyから移行*/
+  margin: 0 auto; /*bodyから移行*/
+  min-height: 100%; /*コンテンツ量が表示領域の高さに満たなければ表示領域の最下部、コンテンツ量が表示領域の高さ以上にあればコンテンツの下部にフッタを表示する*/
+  position: relative; /*現在の位置を相対的に決める*/
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none; /*リストの黒点非表示*/
+}
+
+.header{
+  background-color: #F5B4B3;
+  height: 50px;
+  font-size: 1.5rem;
+}
+
+ul.top_menu{
+  float: right;
+}
+
+.top_menu li{
+  float: left;
+  width: auto;/*widthは子要素に依存*/
+}
+
+.top_menu li a{
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+}
+
+.top_menu li a:hover{
+  text-decoration: underline;/*マウスオーバー時だけ下線出す*/
+}
+
+.logo_image{
+  width: 110px;
+  float: left;
+  margin: 0;/*ブロック要素の外側の余白を自動で左右中央寄せ*/
+}
+
+.image_area{
+  width: 100%;
+}
+
+.side_menu{
+  width:300px;
+  float: left;/*横に要素を並べる*/
+}
+
+.side_menu li{
+  background-color: #F5B4B3;
+  height: 6rem;
+  margin-bottom: 10px;
+}
+
+.side_menu li a{
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;/*リンク下線非表示*/
+  display: block;/*block要素を横いっぱいに広げて縦に並べる excel補助も参考*/
+  padding: 2rem;
+}
+
+.side_menu li:hover{
+  opacity: 0.6;/*マウスオーバー時薄字に*/
+}
+
+.side_menu .point{
+  background-color: #FCECEC;
+}
+
+.side_menu .point a{
+  color: #4D4D4D;
+}
+
+.wrapper{
+  margin-top: 10px;
+  padding-bottom: 100px;
+}
+
+.content{
+  width: 660px;
+  margin-left: 20px;
+  float: left;
+  font-size: 1.5rem;
+}
+/*↓↓課題用に追記↓↓*/
+.contact .form td .name{
+  width: 480px;/*課題指定*/
+}
+
+/*↓↓課題用に追記↓↓*/
+.contact .form td .email{
+  width: 480px;/*課題指定*/
+}
+
+/*↓↓課題用に追記↓↓*/
+.contact .form td .contact_main{
+  width: 480px;/*課題指定*/
+  height: 3.5rem;/*課題サンプルに合わせ、高さ調整*/
+}
+
+/*↓↓課題用に追記↓↓*/
+.contact .form{
+  border-collapse: separate;/*ヘッダーとフォームとの間の間隔を開ける*/
+  border-spacing: 1rem 0px;/*ヘッダーとフォームとの間の間隔を開ける*/
+}
+
+/*↓↓課題用に追記↓↓*/
+.contact .form tr{
+  height: 7rem;/*課題指定*/
+}
+
+/*↓↓課題用に追記↓↓*/
+.contact .form th{
+  width: 150px;/*課題指定*/
+  text-align: right;/*課題サンプルに合わせ、右揃え*/
+}
+
+/*↓↓課題用に追記↓↓*/
+.contact .send{
+  height: 7rem;/*課題サンプルに合わせ、ボタン大きさ調整*/
+  width: 660px;
+  text-align: center;/*ボタン位置を中央寄せ*/
+}
+
+/*↓↓課題用に追記↓↓*/
+.contact .send .sub{
+  font-size: 22pt;/*課題サンプルに合わせ、デザイン調整*/
+  color: #FFFFFF;/*課題サンプルに合わせ、デザイン調整*/
+  background-color: #42a5b3;/*課題サンプルに合わせ、デザイン調整*/
+}
+
+/*↓↓課題用に追記↓↓*/
+.contact .send .sub:hover{
+  opacity: 0.6;/*マウスオーバー時薄字に*/
+}
+
+.footer{
+  background-color: #4D4D4D;
+  height: 100px;
+  width: 100%;
+  position: absolute;/*親要素を基準に絶対的位置を決める*/
+  bottom: 0;
+  display: table;/*vertical-alignのためにtable化*/
+}
+
+.footer p{
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;/*横の中央揃え*/
+  vertical-align: middle;/*縦のを中央揃え ただしインライン要素とテーブルセルのみ使える*/
+  display: table-cell;/*vertical-alignのためにtable-cell化*/
+}
+
+.clearfix:after{
+  content: "";/*空のコンテンツ*/
+  display: block;/*コンテンツが幅や高さを持てるよう設定*/
+  clear: both;/*floatの"左寄せ、右寄せの両方"を解除 floatをしたら解除しないと各要素が重なってしまうことがるためclearは必須*/
+}
